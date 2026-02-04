@@ -1,0 +1,71 @@
+baseURL = "https://liran.blog/"
+languageCode = "en-us"
+title = "Liran's Blog"
+theme = "terminal"
+paginate = 5
+
+# Enable syntax highlighting
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
+  [markup.goldmark.renderer]
+    unsafe = true
+
+# Theme parameters
+[params]
+  contentTypeName = "posts"
+  themeColor = "green"
+  showMenuItems = 3
+  fullWidthTheme = false
+  centerTheme = true
+  
+  # Code highlighting
+  CodeFont = "monospace"
+  
+  # SEO and social
+  description = "Tech blog covering software development, engineering, and technology"
+  keywords = "blog, tech, software, engineering, development"
+  images = ["/og-image.png"]
+
+  [params.logo]
+    logoText = "~/liran.blog"
+    logoHomeLink = "/"
+
+  # Social links
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/dex-liran-test-1"
+
+# Menu
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+# Privacy and security
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# SEO
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
